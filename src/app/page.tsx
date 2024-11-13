@@ -52,8 +52,8 @@ export default function Home() {
                   </span>
                 </div>
                 <h1 className="text-2xl md:text-3xl font-bold mb-2">
-                  Elon Musk Post About 'Executed' Squirrel Drives Meme Coin PNUT
-                  to $130 Million Market Cap
+                  Elon Musk Post About &apos;Executed&&lsquo; Squirrel Drives
+                  Meme Coin PNUT to $130 Million Market Cap
                 </h1>
                 <p className="text-gray-200">
                   The latest tweet from Tesla CEO causes another crypto market
