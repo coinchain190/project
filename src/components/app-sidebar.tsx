@@ -13,7 +13,7 @@ import {
   SidebarMenuItem,
 } from "@/components/ui/sidebar";
 import { UserButton } from "@clerk/nextjs";
-import { Coins, Home, BookOpen, Search, ChevronDown } from "lucide-react";
+import { Coins, BookOpen, Search, ChevronDown } from "lucide-react";
 import {
   Collapsible,
   CollapsibleContent,
@@ -22,12 +22,12 @@ import {
 
 const items = [
   {
-    title: "Home",
-    url: "#",
-    icon: Home,
+    title: "Artigos",
+    url: "/dashboard/article",
+    icon: BookOpen,
   },
   {
-    title: "Artigos",
+    title: "Meus artigos",
     url: "#",
     icon: BookOpen,
   },

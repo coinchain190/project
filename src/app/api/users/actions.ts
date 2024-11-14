@@ -3,19 +3,19 @@
 import { currentUser } from "@clerk/nextjs/server";
 import { prisma } from "@/lib/prisma";
 
-export async function createUserIfNotExists() {
+export async function createUserIfNotExists(userId: string) {
   const user = await currentUser();
   if (!user) return null;
   const email = user?.emailAddresses[0].emailAddress || null;
 
   const existingUser = await prisma.user.findUnique({
-    where: { id: user?.id },
+    where: { id: userId },
   });
 
   if (!existingUser) {
     await prisma.user.create({
       data: {
-        id: user?.id,
+        id: userId,
         emailAddress: email ?? "",
         firstName: user?.firstName ?? "",
         lastName: user?.lastName ?? "",
